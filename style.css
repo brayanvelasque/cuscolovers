@@ -1,38 +1,98 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Cusco Lovers Perú</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
 
-  <!-- Encabezado con fondo hero -->
-  <header class="hero">
-    <img src="images/logooficial.jpg" alt="Logo Cusco Lovers" class="logo" />
-    <h1>Bienvenidos a Cusco Lovers Perú</h1>
-    <p>“Vive la magia del Cusco con nosotros”</p>
-    <a href="#tours" class="btn-primary">Explora nuestros tours</a>
-  </header>
+/* Estilos generales */
+body {
+  line-height: 1.6;
+  background-color: #f9f9f9;
+  color: #333;
+}
 
-  <!-- Contenido principal -->
-  <main>
-    <section class="portada">
-      <h2>Descubre Machu Picchu</h2>
-      <img src="images/machupichu.jpg" alt="Imagen de Machu Picchu" class="promo-img" />
-    </section>
+/* Encabezado tipo hero con fondo de imagen */
+.hero {
+  background: url('images/machupichu.jpg') center/cover no-repeat;
+  text-align: center;
+  padding: 100px 20px;
+  color: white;
+  position: relative;
+}
 
-    <section class="tour" id="tours">
-      <h2>Tour Uchuy Qosqo</h2>
-      <img src="images/uchuy12.jpg" alt="Tour Uchuy Qosqo" class="tour-img" />
-    </section>
-  </main>
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
 
-  <!-- Footer -->
-  <footer>
-    <p>&copy; 2025 Cusco Lovers Perú. Todos los derechos reservados.</p>
-  </footer>
+.hero * {
+  position: relative;
+  z-index: 2;
+}
 
-</body>
-</html>
+.logo {
+  width: 120px;
+  margin-bottom: 20px;
+}
+
+/* Botón principal */
+.btn-primary {
+  background-color: #e74c3c;
+  color: white;
+  padding: 10px 25px;
+  text-decoration: none;
+  border-radius: 5px;
+  display: inline-block;
+  margin-top: 20px;
+  transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #c0392b;
+}
+
+/* Secciones */
+section {
+  padding: 50px 20px;
+  max-width: 900px;
+  margin: auto;
+}
+
+h2 {
+  margin-bottom: 20px;
+  color: #2c3e50;
+  text-align: center;
+}
+
+/* Imágenes destacadas */
+.promo-img,
+.tour-img {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  border-radius: 10px;
+  display: block;
+  margin: 0 auto 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.promo-img:hover,
+.tour-img:hover {
+  transform: scale(1.03);
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px 0;
+  background-color: #2c3e50;
+  color: white;
+  margin-top: 40px;
+}
